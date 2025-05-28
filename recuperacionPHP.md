@@ -1,13 +1,7 @@
-### **Práctica Integradora: Gestión de una Biblioteca Online**  
- **Duración estimada:** 90 minutos  
- **Objetivo:** Desarrollar una aplicación web que permita a los usuarios registrarse, iniciar sesión, ver un catálogo de libros y solicitar préstamos de libros.  
+### **Gestión de una biblioteca online**  
 
----
-
-## **Descripción General del Proyecto**  
 Se desarrollará una aplicación web donde los usuarios podrán registrarse en la plataforma, iniciar sesión, ver un catálogo de libros y solicitar préstamos. Cada usuario podrá ver los libros disponibles y seleccionar uno para solicitar su préstamo. Se utilizará una base de datos para almacenar la información de usuarios, libros y préstamos.  
 
----
 
 ## **Estructura del Proyecto**  
 
@@ -20,7 +14,6 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 5. **Solicitud de Préstamo**: Un formulario para que los usuarios registrados puedan solicitar un libro.  
 6. **Cierre de Sesión**: Opción para que los usuarios puedan cerrar sesión.  
 
----
 
 ## **Parte 1: Creación de la Base de Datos**  
 
@@ -32,7 +25,6 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 - Se deben definir las relaciones entre las tablas, asegurando que los préstamos están asociados a un usuario y un libro.  
 - Se deben insertar datos de prueba en cada tabla para facilitar las pruebas.  
 
----
 
 ## **Parte 2: Registro de Usuarios**  
 
@@ -40,7 +32,6 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 - Al completar el registro, los datos deben almacenarse en la base de datos y el usuario debe recibir un mensaje confirmando el registro.  
 - Una vez registrado, el usuario debe ser redirigido a la página de inicio de sesión (`login.php`).  
 
----
 
 ## **Parte 3: Inicio de Sesión**  
 
@@ -49,7 +40,6 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 - Si las credenciales son incorrectas, debe mostrarse un mensaje de error.  
 - Al iniciar sesión, debe almacenarse la información del usuario en una sesión para identificarlo en futuras interacciones.  
 
----
 
 ## **Parte 4: Listado de Libros**  
 
@@ -58,7 +48,6 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 - Si el usuario **no ha iniciado sesión**, debe mostrarse un mensaje indicando que debe autenticarse antes de poder solicitar un préstamo.  
 - Si el usuario **ha iniciado sesión**, cada libro debe mostrar un botón de **"Solicitar préstamo"**, que redirija a la página `prestamos.php` con la información del libro seleccionado.  
 
----
 
 ## **Parte 5: Solicitud de Préstamo**  
 
@@ -67,14 +56,12 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 - Al confirmar, el préstamo debe registrarse en la base de datos con la **fecha actual** y el usuario debe ser redirigido de vuelta a la página `listado_libros.php`, donde debe mostrarse un mensaje de éxito.  
 - Un usuario solo puede solicitar un libro si **ha iniciado sesión**. Si intenta acceder sin estar autenticado, debe ser redirigido a `login.php`.  
 
----
 
 ## **Parte 6: Cierre de Sesión**  
 
 - Se debe crear una página `logout.php` que cierre la sesión del usuario y lo redirija de vuelta a la página de inicio de sesión (`login.php`).  
 - Una vez cerrada la sesión, si el usuario intenta acceder a `listado_libros.php` o `prestamos.php`, debe ser redirigido a `login.php` automáticamente.  
 
----
 
 ## **Requisitos Adicionales**  
 
@@ -84,7 +71,6 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
   - No debe ser posible acceder a páginas protegidas sin haber iniciado sesión.  
   - Se deben prevenir inyecciones SQL al manejar datos de entrada del usuario.  
 
----
 
 ## **Flujo de Navegación entre Páginas**  
 
@@ -98,8 +84,6 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 8. En cualquier momento, el usuario puede cerrar sesión mediante `logout.php`, lo que lo redirige a `login.php`.  
 9. Si el usuario intenta acceder a `listado_libros.php` o `prestamos.php` sin iniciar sesión, será redirigido a `login.php`.  
 
----
-
 
 ## **Entrega**
 
@@ -107,18 +91,15 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 - Sube un vídeo probando todas las funcionalidades implementadas
 - Sube un archivo SQL con todos los datos de tu aplicación.
 
----
 
 ## **Criterios de Evaluación**  
 
- **Funcionamiento Correcto:** La aplicación debe permitir el registro, inicio de sesión, listado de libros y solicitud de préstamos.  
+ **Funcionamiento correcto:** La aplicación debe permitir el registro, inicio de sesión, listado de libros y solicitud de préstamos.  
  **Seguridad:** Se debe proteger el acceso a páginas privadas y almacenar las contraseñas de forma segura.  
- **Organización del Código:** El código debe estar bien estructurado y ser fácil de entender.  
- **Validación de Datos:** Se deben evitar entradas vacías y prevenir SQL Injection.  
- **Navegación Correcta:** Las redirecciones entre páginas deben funcionar adecuadamente.  
+ **Organización del código:** El código debe estar bien estructurado y ser fácil de entender.  
+ **Validación de datos:** Se deben evitar entradas vacías y prevenir SQL Injection.  
+ **Navegación correcta:** Las redirecciones entre páginas deben funcionar adecuadamente.  
 
-
----
 
 # **Rúbrica de Evaluación – Práctica: Gestión de una Biblioteca Online**  
 
@@ -134,8 +115,14 @@ El proyecto estará compuesto por los siguientes archivos y funcionalidades:
 | **8. Cierre de Sesión** | No se implementa el cierre de sesión o no elimina correctamente los datos de sesión. | Permite cerrar sesión, pero presenta fallos en la redirección o manejo de sesiones. | El cierre de sesión funciona correctamente y redirige al usuario adecuadamente. |
 | **9. Validación de Datos en Formularios** | No se validan los datos de los formularios, permitiendo entradas vacías o incorrectas. | Se validan los datos, pero faltan algunos controles importantes. | Se validan correctamente todos los datos de los formularios para evitar errores y datos inválidos. |
 
+
 ### **Cálculo de la Nota Final**  
 - **Puntuación máxima:** 18 puntos.  
 - **Conversión a escala de 10:** `(Puntos obtenidos / 18) * 10`.  
 
 ---
+
+### **Entrega**  
+
+- Graba la pantalla mientras pruebas todas las funcionalidades contempladas en la rúbrica.
+- Sube a tu repositorio de gitHub todo el código. Haz commits periódicos, trabaja en una rama distinta de main y mergeala para la entrega, haciendo una pull request.
